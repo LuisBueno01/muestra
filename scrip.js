@@ -80,7 +80,6 @@ function showPlano(key, btn) {
   const title = document.getElementById('plano-title');
   const sub = document.getElementById('plano-sub');
   const list = document.getElementById('rooms-list');
-
   // Fade transition
   img.style.opacity = '0';
   setTimeout(() => {
@@ -88,10 +87,8 @@ function showPlano(key, btn) {
     img.style.opacity = '1';
   }, 200);
   img.style.transition = 'opacity 0.2s';
-
   title.textContent = p.title;
   if (sub) sub.textContent = p.sub;
-
   list.innerHTML = p.rooms.map(r =>
     `<div class="room-row">
       <div class="room-num">${r[0]}</div>
@@ -101,15 +98,43 @@ function showPlano(key, btn) {
   ).join('');
 }
 
-// Form
+// Form — envío por WhatsApp
 function submitForm(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.fsub');
-  btn.textContent = '✓ Solicitud Enviada';
-  btn.style.background = '#8B6B4A';
+  const form = e.target;
+
+  const nombre   = form.querySelector('input[placeholder="Tu nombre completo"]').value.trim();
+  const telefono = form.querySelector('input[type="tel"]').value.trim();
+  const correo   = form.querySelector('input[type="email"]').value.trim();
+  const unidad   = form.querySelectorAll('select')[0].value;
+  const objetivo = form.querySelectorAll('select')[1].value;
+  const mensaje  = form.querySelector('textarea').value.trim();
+
+  if (!nombre || !telefono) {
+    alert('Por favor ingresa tu nombre y teléfono.');
+    return false;
+  }
+
+  const texto =
+    `🏗️ *Edificio Abril 31 — Nueva Solicitud*\n\n` +
+    `👤 *Nombre:* ${nombre}\n` +
+    `📞 *Teléfono:* ${telefono}\n` +
+    `✉️ *Correo:* ${correo || '—'}\n` +
+    `🏠 *Unidad:* ${unidad}\n` +
+    `🎯 *Objetivo:* ${objetivo}\n` +
+    `💬 *Mensaje:* ${mensaje || '—'}`;
+
+  const url = `https://wa.me/522291011390?text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+
+  // Feedback visual
+  const btn = form.querySelector('.fsub');
+  btn.textContent = '✓ Redirigiendo a WhatsApp…';
+  btn.style.background = '#25D366';
   setTimeout(() => {
     btn.textContent = 'Enviar Solicitud';
     btn.style.background = '';
   }, 3000);
+
   return false;
 }
