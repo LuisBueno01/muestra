@@ -32,6 +32,13 @@
   <div class="hero">
     <div class="hero-left">
       <div class="hero-tag">Veracruz · Boca del Río</div>
+
+      <!-- PREVENTA BADGE -->
+      <div class="preventa-badge">
+        <span class="preventa-dot"></span>
+        <span class="preventa-label">🏗️ Preventa Activa — Precios de lanzamiento disponibles ahora</span>
+      </div>
+
       <h1 class="hero-title">Edificio<br><em>Abril 31</em></h1>
       <p class="hero-sub">Departamentos modernos con acabados premium, amplios balcones y roof garden. Arquitectura de concreto aparente con vegetación integrada. Ideal para vivir o invertir.</p>
 
@@ -73,12 +80,15 @@
         <div class="hero-badge-n">3 Deptos.</div>
         <div class="hero-badge-l">por planta · 5 niveles</div>
       </div>
+      <!-- PREVENTA STAMP on image -->
+      <div class="preventa-stamp">PREVENTA</div>
     </div>
   </div>
 
   <!-- PILLS STRIP -->
   <div class="pills-strip">
     <div class="pills-track">
+      <span>🏗️ Preventa Activa</span><span class="dot">·</span>
       <span>Concreto Aparente</span><span class="dot">·</span>
       <span>Balcones con Vegetación</span><span class="dot">·</span>
       <span>Roof Garden</span><span class="dot">·</span>
@@ -88,6 +98,7 @@
       <span>Iluminación Natural</span><span class="dot">·</span>
       <span>Estacionamiento Privado</span><span class="dot">·</span>
       <span>Acabados Premium</span><span class="dot">·</span>
+      <span>🏗️ Preventa Activa</span><span class="dot">·</span>
       <span>Concreto Aparente</span><span class="dot">·</span>
       <span>Balcones con Vegetación</span><span class="dot">·</span>
       <span>Roof Garden</span><span class="dot">·</span>
@@ -107,7 +118,8 @@
         <div class="section-eyebrow">Nuestro Proyecto</div>
         <h2 class="section-h">Edificio <em>Abril 31</em></h2>
       </div>
-      <div class="airbnb-tag-header">
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <span class="preventa-pill">🏗️ Preventa Activa</span>
         <span class="airbnb-pill">🏠 Ideal para Airbnb</span>
       </div>
     </div>
@@ -131,7 +143,7 @@
           <div class="pcard-price-row">
             <div>
               <div class="pcard-price">Desde $2,500,000</div>
-              <div class="pcard-price-sub">MXN · Precio de lista</div>
+              <div class="pcard-price-sub">MXN · Precio de preventa</div>
             </div>
             <div class="pcard-btn">→</div>
           </div>
@@ -220,6 +232,13 @@
       </div>
       <div class="ficha-info-panel">
         <div class="section-eyebrow" style="margin-bottom:14px">Ficha Técnica</div>
+
+        <!-- PREVENTA notice inside ficha -->
+        <div class="preventa-ficha-notice">
+          <span class="preventa-dot"></span>
+          <span>Preventa Activa — Aprovecha precios de lanzamiento</span>
+        </div>
+
         <div class="ficha-title">Edificio Abril 31</div>
         <div class="ficha-subtitle">Muraki Construction · Boca del Río, Ver.</div>
         <div class="ficha-items">
@@ -292,10 +311,11 @@
         </div>
         <div class="penthouse-price-block">
           <div class="ph-price">$5,400,000 MXN</div>
-          <div class="ph-price-sub">por unidad · Solo 2 disponibles</div>
+          <div class="ph-price-sub">por unidad · Solo 2 disponibles · Precio de preventa</div>
         </div>
-        <div class="penthouse-airbnb-note">
+        <div class="penthouse-airbnb-note" style="display:flex;gap:10px;flex-wrap:wrap;">
           <span class="airbnb-pill-dark">🏠 Ideal para Airbnb — Máximo retorno en zona turística</span>
+          <span class="preventa-pill-dark">🏗️ Preventa Activa</span>
         </div>
         <a href="#contacto" class="btn-fill" style="margin-top:10px">Apartar mi Penthouse</a>
       </div>
@@ -346,7 +366,7 @@
   <div class="cta-section reveal">
     <div>
       <h2 class="cta-h">¿Tu próximo hogar<br>o inversión está <em>aquí</em>?</h2>
-      <p class="cta-sub">Agenda una visita sin costo · Cupo limitado · Ideal para Airbnb y vivir</p>
+      <p class="cta-sub">🏗️ Preventa Activa · Agenda una visita sin costo · Cupo limitado · Ideal para Airbnb y vivir</p>
     </div>
     <a href="#contacto" class="btn-light">Agendar Visita</a>
   </div>
@@ -356,6 +376,13 @@
     <div class="contact-left">
       <div class="section-eyebrow">Contacto</div>
       <h2 class="section-h">Hablemos de<br>tu <em>inversión</em></h2>
+
+      <!-- PREVENTA notice in contact -->
+      <div class="preventa-contact-notice">
+        <span class="preventa-dot"></span>
+        <span><strong>Preventa Activa</strong> — Precios de lanzamiento con condiciones especiales de financiamiento</span>
+      </div>
+
       <p class="contact-body">Un asesor especializado te atenderá sin compromiso. Tenemos opciones de financiamiento y preventa disponibles.</p>
       <div class="contact-items">
         <div class="c-item">
@@ -369,7 +396,7 @@
           <div class="c-icon">📞</div>
           <div>
             <div class="c-label">Teléfono</div>
-            <div class="c-val">+52 (229) 123 4567</div>
+            <div class="c-val">+52 (229) 101 1390</div>
           </div>
         </div>
         <div class="c-item">
@@ -461,5 +488,99 @@
   </footer>
 
   <script src="scrip.js"></script>
+
+  <style>
+    /* ── Preventa styles ── */
+    .preventa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(180, 120, 40, 0.15);
+      border: 1px solid rgba(180, 120, 40, 0.5);
+      border-radius: 30px;
+      padding: 7px 16px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #d4973a;
+      letter-spacing: 0.02em;
+    }
+    .preventa-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d4973a;
+      box-shadow: 0 0 0 3px rgba(212, 151, 58, 0.3);
+      animation: pulse-dot 1.8s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(212,151,58,0.3); }
+      50%       { box-shadow: 0 0 0 6px rgba(212,151,58,0.1); }
+    }
+    .preventa-stamp {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: #d4973a;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      padding: 5px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .hero-right { position: relative; }
+    .preventa-pill {
+      display: inline-block;
+      background: rgba(180,120,40,0.15);
+      border: 1px solid rgba(180,120,40,0.45);
+      color: #c9892e;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .preventa-ficha-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(180,120,40,0.12);
+      border: 1px solid rgba(180,120,40,0.4);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 13px;
+      color: #c9892e;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .preventa-contact-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: rgba(180,120,40,0.1);
+      border-left: 3px solid #d4973a;
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #c9892e;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+    .preventa-pill-dark {
+      display: inline-block;
+      background: rgba(212,151,58,0.2);
+      border: 1px solid rgba(212,151,58,0.5);
+      color: #e8aa4a;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+  </style>
 </body>
 </html>
