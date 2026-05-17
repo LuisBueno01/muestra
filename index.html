@@ -26,7 +26,22 @@
       <a href="#contacto">Contacto</a>
     </div>
     <a href="#contacto" class="nav-cta">Cotizar</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="#proyecto"  onclick="closeMobileMenu()">Proyecto</a>
+    <a href="#ficha"     onclick="closeMobileMenu()">Ficha Técnica</a>
+    <a href="#planos"    onclick="closeMobileMenu()">Planos</a>
+    <a href="#penthouse" onclick="closeMobileMenu()">Penthouse</a>
+    <a href="#contacto"  onclick="closeMobileMenu()">Contacto</a>
+    <div class="nav-mobile-cta-wrap">
+      <a href="#contacto" class="nav-mobile-cta" onclick="closeMobileMenu()">Cotizar Ahora</a>
+    </div>
+  </div>
 
   <!-- HERO -->
   <div class="hero">
