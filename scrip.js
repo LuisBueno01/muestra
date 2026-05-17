@@ -138,3 +138,30 @@ function submitForm(e) {
 
   return false;
 }
+
+// ── Mobile menu ──────────────────────────────────────
+const hamburger   = document.getElementById('hamburger');
+const mobileMenu  = document.getElementById('mobileMenu');
+
+function closeMobileMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+}
+
+// Close on outside tap
+document.addEventListener('click', (e) => {
+  if (mobileMenu && mobileMenu.classList.contains('open')) {
+    if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      closeMobileMenu();
+    }
+  }
+});
